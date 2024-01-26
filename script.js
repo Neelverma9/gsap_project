@@ -58,12 +58,50 @@ gsap.to(".imgsec img,#about",{
     
 
 })
-let clickbutton=document.querySelectorAll("#cont2 .inside h4");
-clickbutton.forEach(function(eme){
-       eme.addEventListener("onclick",function(){
-             let b=document.querySelector(".cont2 img #new");
-             b.src='https://i.pinimg.com/564x/60/0e/4d/600e4d05b76440348114ada5f86fe217.jpg';
-             
-            
-       })
+let clickbuttn = document.querySelectorAll("#dot h4");
+let im = document.querySelector("#cont2 img ");
+let count = 0;
+clickbuttn[0].addEventListener("click", function () {
+    if(count==0){
+        im.src = 'https://images.unsplash.com/photo-1522688306378-fbb315c6ba9a?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+        im.style.height = '300px';
+        count = 1;
+    }
+    else{
+        im.src = 'https://i.pinimg.com/564x/16/92/b3/1692b3193ce168983c05e8f42b2997c6.jpg';
+        im.style.height = '300px';
+        count = 0;
+
+    }
+})
+
+let c1=0;
+
+
+clickbuttn[1].addEventListener("click", function () {
+    if(c1==0){
+        im.src = 'https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    im.style.height = '300px';
+    c1=1;
+    }else{
+        im.src = 'https://media.istockphoto.com/id/1096150282/photo/female-hands-holding-red-heart.jpg?s=612x612&w=is&k=20&c=yq9e7RxsKbF1hvLCSs90-BXai70qkXDQNKEWHGE_D8A=';
+       im.style.height = '300px';
+       c1=0;
+
+    }
+   
+})
+let c2=0;
+
+clickbuttn[2].addEventListener("click", function () {
+    if(c2==0){
+        im.src = 'https://media.istockphoto.com/id/1096150282/photo/female-hands-holding-red-heart.jpg?s=612x612&w=is&k=20&c=yq9e7RxsKbF1hvLCSs90-BXai70qkXDQNKEWHGE_D8A=';
+        im.style.height = '300px';
+        c2=1;
+    }else{
+        im.src = 'https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+        im.style.height = '300px';
+        c2=0;
+    }
+    
 })
